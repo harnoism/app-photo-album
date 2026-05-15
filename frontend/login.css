@@ -1,0 +1,223 @@
+body {
+    font-family: "McLaren", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+:root {
+    --rose-vif: #ff46a2;
+    --blanc: #ffffff;
+    --violet-fonce: #641B61;
+    --rose-clair: #ffbbe7;
+    --rose1: #A71F81;
+    --noir-fonce: #1a0019;
+    --gris-clair: #D9D9D9;
+    --gris-placeholder: #9ca3af;
+    --gris-fonce: #838383;
+    --noir: #000000;
+}
+
+/* PAGE */
+.register-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    background: var(--blanc);
+
+}
+
+/* ICON */
+#register-icon {
+    width: 68px;
+    height: 68px;
+    border-radius: 20px;
+    background: var(--rose1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 6px 0 var(--violet-fonce);
+    margin: 0 auto 1rem;
+}
+
+/* CONTAINER */
+
+.register-container {
+    width: 100%;
+    max-width: 420px;
+    padding: 8px;
+}
+
+/* TITRE */
+
+.register-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--noir-fonce);
+    text-align: center;
+    
+}
+
+.register-mini-title {
+    margin-top: 1rem;
+    text-align: center;
+    color: var(--gris-placeholder);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+/* FORMULAIRE */
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+.register-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+/* INPUTS */
+
+.register-input {
+    padding: 1rem 1.2rem;
+    border: 2px solid var(--gris-clair);
+    border-radius: 1rem;
+    background-color: var(--gris-clair);
+    color: var(--noir);
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.register-input::placeholder {
+    color: var(--gris-placeholder);
+}
+
+.register-input:focus {
+    border-color: var(--rose-vif);
+}
+
+.register-input-title{
+    margin:0;
+    font-size: medium;
+    font-weight: 500;
+}
+
+/* MESSAGE ERREUR */
+
+.register-error {
+    color: #f87171;
+    font-size: 0.9rem;
+}
+
+/* BOUTON */
+
+.register-button {
+    border: 1px solid var(--violet-fonce);
+    background-color: var(--rose1);
+    box-shadow: var(--violet-fonce) 0px 5px;
+    border-radius: 1rem;
+    font-weight: 500;
+    font-size: medium;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 1.4rem;
+}
+
+
+/* TEXTE LOGIN */
+
+.register-login-text {
+    margin-top: 1rem;
+    text-align: center;
+    color: var(--gris-placeholder);
+    font-size: 0.9rem;
+}
+
+
+/* LIEN */
+
+.register-link {
+    margin-left: 0.3rem;
+    color: var(--rose-vif);
+    text-decoration: underline;
+}
+
+/* ========== RESPONSIVE ========== */
+
+
+@media (max-width: 768px) {
+    .register-container {
+        max-width: 100%;
+        padding: 1.5rem;
+    }
+
+    .register-title {
+        font-size: 1.4rem;
+    }
+
+    .register-button {
+        padding: 1.2rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .register-page {
+        align-items: flex-start;
+        padding: 2rem 1.2rem;
+    }
+
+    .register-container {
+        padding: 1rem;
+    }
+
+    #register-icon {
+        width: 58px;
+        height: 58px;
+        font-size: 1.6rem;
+    }
+
+    .register-title {
+        font-size: 1.3rem;
+    }
+
+    .register-mini-title {
+        font-size: 0.85rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .register-input {
+        padding: 0.9rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .register-input-title {
+        font-size: 0.9rem;
+    }
+
+    .register-button {
+        padding: 1rem;
+        font-size: 0.95rem;
+    }
+
+    .register-form {
+        gap: 1.1rem;
+    }
+
+    .register-login-text {
+        font-size: 0.85rem;
+    }
+}

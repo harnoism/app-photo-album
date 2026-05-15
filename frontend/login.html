@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=McLaren&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+
+<main class="register-page">
+
+    <div class="register-container">
+        <span id="register-icon">&#127800;</span>
+        <h1 class="register-title">
+            Bon retour !
+        </h1>
+        <h3 class="register-mini-title">Connecte toi à ton compte</h3>
+
+        <form id="registerForm2" class="register-form">
+
+            <div class="register-field">
+                <h3 class="register-input-title">Email</h3>
+                <input type="email" placeholder="Email" id="email" class="register-input">
+            </div>
+
+            <div class="register-field">
+                <h3 class="register-input-title">Mot de passe</h3>
+                <input type="password" placeholder="Mot de passe" id="password" class="register-input">
+            </div>
+
+            <p id="error" class="register-error"></p>
+
+            <button type="submit" class="register-button">
+                Se connecter →
+            </button>
+
+        </form>
+
+        <p class="register-login-text">
+            Pas encore de compte ?
+
+            <a href="signup.html" class="register-link">
+                Créer un compte
+            </a>
+        </p>
+    </div>
+</main>
+<script src="composant/login.js"></script>
+
+</html>
