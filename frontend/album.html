@@ -1,11 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Album</title>
+    <title>Albums</title>
+    <link href="https://fonts.googleapis.com/css2?family=McLaren&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="album.css">
+
 </head>
+
 <body>
-    <h1>COUCOU</h1>
+    <div class="topbar">
+        <div class="topbar-back">
+            <button class="icon-btn" id="decoBtn">
+                <img class="icon_album" src="../img/back.svg" alt="back" />
+            </button>
+        </div>
+        <span class="topbar-title">Albums</span>
+        <div class="topbar-actions">
+            <button class="icon-btn" id="addBtn">
+                <img class="icon_album" src="../img/plus.svg" alt="plus" />
+            </button>
+            <button class="icon-btn">
+                <img class="icon_album" src="../img/point.svg" alt="trois_point" />
+            </button>
+        </div>
+    </div>
+    <div class="app">
+
+
+        <div class="topbar-bottom">
+            <div class="topbar-bottom">
+                <button class="filter-chip active" id="filterTout">Tout</button>
+                <button class="filter-chip" id="filterFav">
+                    ❤️ Favoris
+                </button>
+                <button class="filter-chip" id="filterLock">
+                    🔒Privés
+                </button>
+                <button class="filter-chip" id="filterFiltre">
+                    ≡ Filtre
+                </button>
+            </div>
+        </div>
+
+        <!-- EXEMPLE ALBUMS -->
+        <div class="albums-grid" id="albumsGrid">
+            <div class="album-card">
+                <div class="album-thumb">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="album-label">Vacances</div>
+            </div>
+            <div class="album-card">
+                <div class="album-thumb">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="album-label">Famille</div>
+            </div>
+            <div class="album-card">
+                <div class="album-thumb">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="album-label">Famille</div>
+            </div>
+            <div class="album-card">
+                <div class="album-thumb">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="album-label">Famille</div>
+            </div>
+            <div class="album-card">
+                <div class="album-thumb">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="album-label">Famille</div>
+            </div>
+            <div class="album-card">
+                <div class="album-thumb">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="album-label">Famille</div>
+            </div>
+            <div class="album-card-add" id="addAlbumCard">
+                    <button class="ajout-album">
+                        <img src="../img/plus.svg" alt="plus" />
+                    </button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="tabs">
+        <button class="tab active" onclick="window.location.href='album.html'">Albums</button>
+        <button class="tab">Photos</button>
+        <button class="tab" onclick="window.location.href='share.html'">Partager</button>
+        <button class="tab" onclick="window.location.href='compte.html'">Compte</button>
+    </div>
+
+    <!-- POPUP -->
+    <div class="popup-overlay" id="overlay">
+        <div class="popup">
+            <div class="popup-header">
+                <button class="close-btn" id="closeBtn" aria-label="Fermer">
+                    <img src="../img/cross.svg" alt="cross" />
+                </button>
+                <span class="popup-title">New Folder</span>
+                <button class="create-btn" id="createBtn">Create</button>
+            </div>
+
+            <div class="photo-placeholder" id="photoPreview">
+                <img class="img-folder" src="../img/img.svg" alt="img" />
+            </div>
+
+            <input type="file" id="photoInput" accept="image/*" multiple style="display:none" />
+            <button class="add-photos-btn" id="addPhotosBtn">Add Photos</button>
+
+            <input class="popup-input" id="albumName" placeholder="Album Name" />
+            <textarea class="popup-textarea" id="albumDesc" placeholder="Description ..."></textarea>
+            <button class="gear" onclick="window.location.href='parameter.html'">
+                <img src="../img/gear.svg" alt="gear" />
+            </button>
+        </div>
+    </div>
+
+    <!-- POPUP 2 -->
+    <div class="popup-overlay2" id="overlay2">
+        <div class="popup2">
+            <p class="popup-title2">As-tu finis ?</p>
+            <p class="popup-title3">Assure-toi d'avoir finis ce que tu devais faire avant de te déconnecter</p>
+            <div class="popup-mid">
+                <button class="deco-btn" id="confirmDecoBtn">
+                    Oui je me déconnecte ✓
+                </button>
+                <button class="close-btn2" id="closeBtn2">
+                    Non, je continue
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="composant/album.js"></script>
 </body>
+
 </html>

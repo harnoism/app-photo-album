@@ -1,0 +1,64 @@
+body {
+    font-family: "McLaren", sans-serif;
+    min-height: 100vh;
+}
+
+:root {
+    --rose-vif: #ff46a2;
+    --blanc: #ffffff;
+    --violet-fonce: #641B61;
+    --rose-clair: #FFB4D9;
+    --rose1: #A71F81;
+    --noir-fonce: #1a0019;
+    --gris-clair: #D9D9D9;
+    --gris-placeholder: #9ca3af;
+    --gris-fonce: #838383;
+    --noir: #000000;
+}
+
+
+.parameter-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+
+.header-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--noir-fonce);
+}
+
+.close-btn {
+    background: var(--gris-clair);
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+    cursor: pointer;
+    color: var(--gris-fonce);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.finish-btn {
+    background: var(--rose-vif);
+    color: var(--blanc);
+    border: none;
+    border-radius: 20px;
+    padding: 6px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.create-btn:hover {
+    background: var(--rose-vif);
+}
+
