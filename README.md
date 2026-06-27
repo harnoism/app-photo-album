@@ -24,6 +24,7 @@ The application allows users to:
 
 The project is organized with a clear separation between the frontend and backend.
 
+```bash
 app-photo-album/
 
 ├── frontend/
@@ -35,7 +36,7 @@ app-photo-album/
 ├── Controllers
 ├── Models
 └── PHP (OOP + MVC)
-
+```
 
 
 ## Technologies Used
