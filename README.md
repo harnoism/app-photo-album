@@ -27,15 +27,21 @@ The project is organized with a clear separation between the frontend and backen
 ```bash
 app-photo-album/
 
-├── frontend/
-│ ├── HTML
-│ ├── CSS
-│ └── JavaScript (OOP)
+bdd/
+  ├── Controllers/
+  ├── Models/
+  ├── index.php
+  └── sql-connect.php
+frontend/
+  ├── albums/
+  ├── Login/
+  ├── Partager/
+  ├── photo-add/
+  ├── album-compte/
+  └── register/
+database/
+  └── app_photo_album.sql
 
-└── backend/
-├── Controllers
-├── Models
-└── PHP (OOP + MVC)
 ```
 
 
@@ -72,6 +78,28 @@ app-photo-album/
 git clone https://github.com/harnoism/app-photo-album.git
 ```
 
+# Configurer l'environnement
+cp .env.example .env
+# Remplir les variables dans .env
+
+# Lancer avec XAMPP / WAMP
+# Placer le projet dans htdocs/
+# Importer database/app_photo_album.sql dans phpMyAdmin
+
+# Accéder à :
+```http://localhost/app-photo-album/frontend/Login/login.html```
+
+## Compte de démonstration
+- Email : admin@gmail.com
+- Mot de passe : admin123
+
+## Database Setup
+The database export is available here:
+
+database/app_photo_album.sql
+
+Import it using phpMyAdmin before running the application.
+
 ## Main Features
 ### Authentication
 
@@ -82,40 +110,37 @@ Log in to the application
 Photo Album Management
 
 Users can:
-- Create, edit and delete photo albums
-- Add photos to albums
-- Upload images through an upload system
-- Add titles, descriptions and creation dates to albums
-- Organize albums and photos using tags
-- Add information such as photo descriptions and capture dates
-- Sharing & Access Management
+  - Create, edit and delete photo albums
+  - Add photos to albums
+  - Upload images through an upload system
+  - Add titles, descriptions and creation dates to albums
+  - Organize albums and photos using tags
+  - Add information such as photo descriptions and capture dates
+  - Sharing & Access Management
 
 The application allows users to:
-
-- Define album visibility:
-- Private
-- Public
-- Restricted access
-- Share albums with other users
-- interact with albums
-- Manage user permissions
-- Control access rights for viewing or modifying content
-- Comments Management
+  - Define album visibility:
+  - Private
+  - Public
+  - Restricted access
+  - Share albums with other users
+  - interact with albums
+  - Manage user permissions
+  - Control access rights for viewing or modifying content
+  - Comments Management
 
 Users can:
-
-- Add comments on photos
-- Edit their own comments
-- Delete their comments
-- View comments on accessible photos and albums
-- Search & Filtering
+  - Add comments on photos
+  - Edit their own comments
+  - Delete their comments
+  - View comments on accessible photos and albums
+  - Search & Filtering
 
 The application provides:
-
-- Search by photo or album tags
-- Filter photos by date
-- Search albums by title
-- Quickly find specific photos inside albums
+  - Search by photo or album tags
+  - Filter photos by date
+  - Search albums by title
+  - Quickly find specific photos inside albums
 
   
 ## Screenshots
@@ -174,6 +199,9 @@ JavaScript Object-Oriented Programming
 MySQL Database
 Responsive Interface
 W3C Standards Compliance
-Author
 
+## Author
+
+Maeva
+Bachelor Informatique — 2026
 Project developed as part of a full-stack web development project.
