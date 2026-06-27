@@ -78,17 +78,28 @@ database/
 git clone https://github.com/harnoism/app-photo-album.git
 ```
 
-Configurer l'environnement
-Lancer avec XAMPP / WAMP
-Placer le projet dans htdocs/
-Importer database/app_photo_album.sql dans phpMyAdmin
+## Environment Setup
+Start your local server using XAMPP / WAMP / MAMP
+Place the project inside:
 
-# Accéder à :
+```htdocs/app-photo-album```
+
+Import the database file into phpMyAdmin:
+
+```database/app_photo_album.sql```
+
+Configure the database connection in:
+
+```bdd/sql-connect.php```
+
+# Run the application
+Open your browser:
+
 ```http://localhost/app-photo-album/frontend/Login/login.html```
 
-## Compte de démonstration
-- Email : admin@gmail.com
-- Mot de passe : admin123
+## Demo Account
+- Email: admin@gmail.com
+- Password: admin123
 
 ## Database Setup
 The database export is available here:
@@ -190,12 +201,12 @@ The application provides:
 
 ## Requirements Fulfilled
 
-MVC Architecture
-PHP Object-Oriented Programming
-JavaScript Object-Oriented Programming
-MySQL Database
-Responsive Interface
-W3C Standards Compliance
+- MVC Architecture
+- PHP Object-Oriented Programming
+- JavaScript Object-Oriented Programming
+- MySQL Database
+- Responsive Interface
+- W3C Standards Compliance
 
 ## Author
 
