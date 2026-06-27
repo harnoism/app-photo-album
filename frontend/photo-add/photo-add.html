@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo-add</title>
+    <link href="https://fonts.googleapis.com/css2?family=McLaren&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="photo-add.css">
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="header-top-row">
+        <div class="top-header">
+            <button class="close-btn" onclick="window.location.href='../albums/album.html'">
+                <p><i class="fa-solid fa-arrow-left-long" style="color: rgb(255, 255, 255);"></i></p>
+            </button>
+            <h2 class="photo-title">Ajouter des photos</h2>
+        </div>
+        <div class="album-label">
+            Album :<strong id="albumNomDisplay">-</strong>
+        </div>
+    </div>
+    <div class="popup-overlay" id="overlay">
+        <div class="popup">
+            <div class="photo-placeholder" id="photoPreview">
+                <img class="img-folder" src="../../img/img.svg" alt="img" />
+                <span class="upload"> Sélectionner </span>
+                <span class="upload-formats"> JPG, PNG, JPEG · Max 5Mo</span>
+                <input type="file" id="photoInput" accept="image/jpeg,image/png" multiple hidden />
+            </div>
+            <div class="preview-grid" id="previewGrid"></div>
+
+            <!-- TAGS -->
+            <div class="popup-section-label">Étiquettes</div>
+
+            <div class="popup-suggestions" id="suggestionsRow">
+                <span class="sug-tag" data-tag="vacances">vacances</span>
+                <span class="sug-tag" data-tag="famille">famille</span>
+                <span class="sug-tag" data-tag="travail">travail</span>
+                <span class="sug-tag" data-tag="anniversaire">anniversaire</span>
+                <span class="sug-tag" data-tag="voyage">voyage</span>
+                <span class="sug-tag" data-tag="nature">nature</span>
+                <span class="sug-tag" data-tag="amis">amis</span>
+                <span class="sug-tag" data-tag="sport">sport</span>
+            </div>
+
+            <div class="popup-tags-row" id="tagsRow">
+                <span class="aucun-tag">Aucun tag sélectionné</span>
+            </div>
+
+            <div class="tag-custom-row">
+                <input class="custom-tag-input" type="text" id="customTagInput" placeholder="Ton propre tag..."
+                    maxlength="30" />
+                <button class="add-custom-tag" type="button" id="addCustomTag">+ Ajouter</button>
+            </div>
+            <div class="form-section" id="formSection" style="display:none">
+                <textarea class="photo-textarea" id="photoDesc" placeholder="Description (optionnelle)…"></textarea>
+                <input type="date" class="photo-date" id="photoDate" />
+                <div class="form-error" id="formError"></div>
+                <button class="submit-btn" id="submitBtn">Enregistrer les photos</button>
+            </div>
+        </div>
+
+        <div class="photos-grid-container">
+            <h3>Photos</h3>
+            <div id="photosGrid" class="photos-grid">
+            </div>
+        </div>
+        <script src="photo-add.js"></script>
+</body>
+
+</html>

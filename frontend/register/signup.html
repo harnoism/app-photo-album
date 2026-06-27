@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <link href="https://fonts.googleapis.com/css2?family=McLaren&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+
+<main class="register-page">
+
+    <div class="register-container">
+        <span id="register-icon">&#128075;</span>
+        <h1 class="register-title">
+            Créer un compte
+        </h1>
+        <p class="register-mini-title" id="step-label">Etape 1 sur 3</p>
+
+        <!-- BARRE DE PROGRESSION -->
+        <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="progressBar"></div>
+        </div>
+
+        <form id="registerForm" class="register-form">
+
+            <!-- ÉTAPE 1 -->
+            <div class="step active" id="step1">
+                <div class="register-field">
+                    <h3 class="register-input-title">Quel est ton prénom ?</h3>
+                    <input type="text" id="name" class="register-input" placeholder="Prénom">
+                </div>
+            </div>
+
+            <!-- ÉTAPE 2 -->
+            <div class="step" id="step2">
+                <div class="register-field">
+                    <h3 class="register-input-title">Quelle est ton adresse email ?</h3>
+                    <input type="email" id="email" class="register-input" placeholder="Email">
+                </div>
+            </div>
+
+            <!-- ÉTAPE 3 -->
+            <div class="step" id="step3">
+                <div class="register-field">
+                    <h3 class="register-input-title">Choisis un mot de passe</h3>
+                    <input type="password" id="password" class="register-input" placeholder="Mot de passe">
+                </div>
+            </div>
+
+            <p id="error" class="register-error"></p>
+
+            <button type="button" class="register-button" id="nextBtn" disabled>
+                Suivant →
+            </button>
+
+        </form>
+
+        <p class="register-login-text">
+            Déjà un compte ?
+
+            <a href="../Login/login.html" class="register-link">
+                Se connecter
+            </a>
+        </p>
+    </div>
+</main>
+<script src="signup.js"></script>
+
+</html>

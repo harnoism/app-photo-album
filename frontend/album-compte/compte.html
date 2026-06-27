@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon compte</title>
+    <link href="https://fonts.googleapis.com/css2?family=McLaren&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="compte.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="compte-header">
+        <div class="compte-header-top">
+            <span class="compte-title">Mon Profil</span>
+            <button class="edit-profile-btn" id="editProfileBtn"><i class="fa-solid fa-pen"></i></button>
+        </div>
+
+        <div class="profile-block">
+            <div class="avatar-wrap" id="avatarWrap">
+                <img id="avatarImg" src="" alt="avatar" style="display:none;" />
+                <span id="avatarPlaceholder">👤</span>
+                <label class="avatar-edit-label" id="avatarEditLabel" style="display:none;">
+                    <i class="fa-solid fa-camera"></i>
+                    <input type="file" id="avatarInput" accept="image/*" hidden />
+                </label>
+            </div>
+            <div class="profile-info">
+                <div class="profile-name" id="profileName">—</div>
+                <div class="profile-email" id="profileEmail">—</div>
+                <div class="profile-stats">
+                    <div class="stat-item"><strong id="followersCount">0</strong><span>abonnés</span></div>
+                    <div class="stat-item"><strong id="followingCount">0</strong><span>abonnements</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BIO (mode lecture) -->
+        <div class="bio-block" id="bioBlock">
+            <p id="bioText" class="bio-text">Aucune bio pour l'instant.</p>
+        </div>
+
+        <!-- BIO (mode édition) -->
+        <div class="bio-edit-block" id="bioEditBlock" style="display:none;">
+            <textarea id="bioInput" maxlength="300" placeholder="Présente-toi, ajoute tes réseaux..."></textarea>
+            <div class="bio-edit-actions">
+                <button id="saveBioBtn" class="save-bio-btn">Enregistrer</button>
+                <button id="cancelBioBtn" class="cancel-bio-btn">Annuler</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ONGLETS -->
+    <div class="compte-tabs">
+        <button class="compte-tab active" id="tabFavoris">❤️ Favoris</button>
+        <button class="compte-tab" id="tabParams">⚙️ Paramètres</button>
+    </div>
+
+    <!-- FAVORIS -->
+    <div id="panelFavoris" class="panel-content" style="padding-bottom:90px;">
+        <div class="favoris-grid" id="favorisGrid">
+            <p class="empty-state">Aucun favori pour l'instant.</p>
+        </div>
+    </div>
+
+    <!-- PARAMS -->
+    <div id="panelParams" class="panel-content" style="display:none; padding-bottom:90px;">
+        <div class="params-section">
+            <button class="param-row deco-row" id="decoBtn">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                Se déconnecter
+            </button>
+        </div>
+    </div>
+
+    <div class="tabs">
+        <button class="tab" onclick="window.location.href='../albums/album.html'">Albums</button>
+        <button class="tab" onclick="window.location.href='../Partager/share.html'">Partager</button>
+        <button class="tab active">Compte</button>
+    </div>
+
+    <script src="compte.js"></script>
+</body>
+
+</html>

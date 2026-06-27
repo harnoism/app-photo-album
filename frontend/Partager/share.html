@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partager</title>
+    <link href="https://fonts.googleapis.com/css2?family=McLaren&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="share.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="share-tabs-row">
+            <button class="share-tab active" id="tabMesAlbums">Mes albums</button>
+            <button class="share-tab" id="tabPartagesAvecMoi">Partagés avec moi</button>
+        </div>
+        <div class="header-top">
+            <div>
+                <div class="header-title">Partager</div>
+                <div class="header-sub">Choisissez un album à partager</div>
+            </div>
+            <button class="icon-btn" onclick="window.location.href='../albums/album.html'">
+                <i class="fa-solid fa-arrow-left-long" style="color:#fff;"></i>
+            </button>
+        </div>
+        <div class="album-strip" id="albumStrip"></div>
+    </div>
+
+    <!-- PANEL MES ALBUMS -->
+    <div id="panelMesAlbums" style="padding-bottom:90px;">
+        <div class="popup-section-label">Visibilité</div>
+        <div class="visibilite">
+            <button class="vis-card">
+                <span class="vis-ico">🌐</span>
+                <span class="vis-name">Public</span>
+            </button>
+            <button class="vis-card">
+                <span class="vis-ico">👥</span>
+                <span class="vis-name">Restreint</span>
+            </button>
+            <button class="vis-card">
+                <span class="vis-ico">🔒</span>
+                <span class="vis-name">Privé</span>
+            </button>
+        </div>
+
+        <div class="sec">Inviter un utilisateur</div>
+        <div class="search-invite" style="position:relative;">
+            <input class="invite-input" id="inviteInput" placeholder="Tapez le nom ou l'e-mail..." autocomplete="off" />
+        </div>
+
+        <div class="sec">Utilisateurs ayant accès</div>
+        <div id="contactList"></div>
+
+        <div class="sec">Lien de partage</div>
+        <div class="link-box">
+            <div class="link-url-row">
+                <span class="link-url" id="linkUrl">Album privé — aucun lien disponible</span>
+                <button class="copy-btn" id="copyBtn" disabled>Copier</button>
+            </div>
+        </div>
+    </div>
+    <div id="panelPartages" style="display:none; padding-bottom:90px;">
+        <div class="sec">Albums partagés avec moi</div>
+        <div id="publicAlbumsGrid"></div>
+    </div>
+
+    <div class="tabs">
+        <button class="tab" onclick="window.location.href='../albums/album.html'">Albums</button>
+        <button class="tab active" onclick="window.location.href='../Partager/share.html'">Partager</button>
+        <button class="tab" onclick="window.location.href='../album-compte/compte.html'">Compte</button>
+    </div>
+
+    <div class="toast" id="toast"></div>
+    <script src="share.js"></script>
+</body>
+
+</html>

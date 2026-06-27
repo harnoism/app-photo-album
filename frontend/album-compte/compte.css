@@ -1,0 +1,399 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "McLaren", sans-serif;
+    background: #fdf0f8;
+    min-height: 100vh;
+}
+
+:root {
+    --rose-vif: #ff46a2;
+    --blanc: #ffffff;
+    --violet-fonce: #641B61;
+    --rose-clair: #fdf0f8;
+    --rose1: #A71F81;
+    --noir-fonce: #1a0019;
+    --gris-clair: #D9D9D9;
+    --gris-placeholder: #aaa;
+    --gris-fonce: #838383;
+}
+
+.compte-header {
+    background: var(--rose1);
+    padding: 16px 16px 20px;
+    color: white;
+
+}
+
+.compte-header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.compte-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+}
+
+.edit-profile-btn {
+    background: rgba(255, 255, 255, 0.25);
+    border: none;
+    border-radius: 10px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.profile-block {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+}
+
+.avatar-wrap {
+    position: relative;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.avatar-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#avatarPlaceholder {
+    font-size: 26px;
+}
+
+.avatar-edit-label {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+}
+
+.profile-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.profile-name {
+    font-size: 17px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.profile-email {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.profile-stats {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.stat-item strong {
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+}
+
+.stat-item span {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.bio-block {
+    margin-top: 4px;
+}
+
+.bio-text {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.5;
+}
+
+.bio-edit-block {
+    margin-top: 10px;
+}
+
+.bio-edit-block textarea {
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-size: 13px;
+    font-family: "McLaren", sans-serif;
+    resize: none;
+    min-height: 80px;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    outline: none;
+}
+
+.bio-edit-block textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.bio-edit-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+}
+
+.save-bio-btn {
+    background: white;
+    color: var(--rose1);
+    border: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: "McLaren", sans-serif;
+    cursor: pointer;
+}
+
+.cancel-bio-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-size: 13px;
+    font-family: "McLaren", sans-serif;
+    cursor: pointer;
+}
+
+.compte-tabs {
+    display: flex;
+    background: white;
+    border-bottom: 1px solid #f0e0f0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.compte-tab {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    background: none;
+    font-size: 13px;
+    font-family: "McLaren", sans-serif;
+    color: #aaa;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.15s;
+}
+
+.compte-tab.active {
+    color: var(--rose1);
+    border-bottom: 3px solid var(--rose1);
+    font-weight: 700;
+}
+
+.panel-content {
+    padding: 16px;
+    background: #fdf0f8;
+    min-height: calc(100vh - 320px);
+    padding-bottom: 100px;
+}
+
+.favoris-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.favori-card {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    aspect-ratio: 1;
+    background: #ddd;
+    transition: transform 0.2s;
+}
+
+.favori-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.unlike-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty-state {
+    color: #aaa;
+    font-size: 14px;
+    text-align: center;
+    padding: 40px 20px;
+    grid-column: 1 / -1;
+}
+
+.params-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.param-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    background: white;
+    border-radius: 14px;
+    border: none;
+    font-size: 14px;
+    font-family: "McLaren", sans-serif;
+    color: var(--noir-fonce);
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    transition: background 0.15s;
+}
+
+.param-row:hover {
+    background: #fdf0f8;
+}
+
+.deco-row {
+    color: #e0305a;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 16px 16px 0 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px -2px 12px;
+    padding: 8px 12px;
+    z-index: 100;
+}
+
+.tab {
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 12px;
+    font-family: "McLaren", sans-serif;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+.tab.active {
+    background: var(--rose1);
+    color: white;
+    font-weight: 500;
+    border-radius: 20px;
+    padding: 6px 18px;
+    font-size: 12px;
+}
+
+@media (min-width: 480px) {
+    .favoris-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+
+    .compte-header {
+        padding: 20px 40px 24px;
+    }
+
+    .panel-content {
+        padding: 20px 40px 100px;
+    }
+
+    .favoris-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .compte-header {
+        padding: 20px 80px 24px;
+    }
+
+    .panel-content {
+        padding: 20px 80px 100px;
+    }
+
+    .favoris-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (min-width: 1400px) {
+    .favoris-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
