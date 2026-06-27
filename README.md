@@ -120,22 +120,41 @@ The application provides:
 ## Screenshots
 
 ### Login Page
+
 <img width="1917" height="904" alt="Capture d&#39;écran 2026-06-27 175733" src="https://github.com/user-attachments/assets/00d05977-7007-449c-a7d6-c4caabac2177" />
+
 ### Register Page
+
 <img width="1919" height="910" alt="Capture d&#39;écran 2026-06-27 175751" src="https://github.com/user-attachments/assets/af1dc82d-87a5-4282-a301-484410645b3e" />
+
 ### Album
+
 <img width="1919" height="914" alt="Capture d&#39;écran 2026-06-27 175811" src="https://github.com/user-attachments/assets/d00ce1d4-a7ff-4f2f-bb92-313928063075" />
+
 ### Create Album
+
 <img width="1919" height="911" alt="Capture d&#39;écran 2026-06-27 175824" src="https://github.com/user-attachments/assets/9995c030-1186-49ca-94dd-55d3843d894f" />
+
 ### Filter Album
+
 <img width="1916" height="913" alt="Capture d&#39;écran 2026-06-27 175839" src="https://github.com/user-attachments/assets/f98ce785-1519-4cdb-be50-32a1a027a8cb" />
+
 ### Photo
-<img width="1919" height="911" alt="Capture d&#39;écran 2026-06-27 175853" src="https://github.com/user-attachments/assets/21215076-523a-4c18-b8ca-9f8423bd6381" /> <img width="1919" height="908" alt="Capture d&#39;écran 2026-06-27 175913" src="https://github.com/user-attachments/assets/218b7010-c5c5-47ea-9bfe-f807e6bb3ddf" />
+
+<img width="1919" height="911" alt="Capture d&#39;écran 2026-06-27 175853" src="https://github.com/user-attachments/assets/21215076-523a-4c18-b8ca-9f8423bd6381" /> 
+<img width="1919" height="908" alt="Capture d&#39;écran 2026-06-27 175913" src="https://github.com/user-attachments/assets/218b7010-c5c5-47ea-9bfe-f807e6bb3ddf" />
+
 ### Comments
+
 <img width="1917" height="911" alt="Capture d&#39;écran 2026-06-27 175935" src="https://github.com/user-attachments/assets/cb7a763f-9501-48c3-8369-4b7ed4586825" />
+
 ### Sharing
-<img width="1918" height="915" alt="Capture d&#39;écran 2026-06-27 175953" src="https://github.com/user-attachments/assets/2985e9d5-9ecc-4c93-a012-2e9133939724" /> <img width="1919" height="915" alt="Capture d&#39;écran 2026-06-27 180120" src="https://github.com/user-attachments/assets/21ee34a4-f06c-4f7a-924c-eca3342d2ca2" />
+
+<img width="1918" height="915" alt="Capture d&#39;écran 2026-06-27 175953" src="https://github.com/user-attachments/assets/2985e9d5-9ecc-4c93-a012-2e9133939724" />
+<img width="1919" height="915" alt="Capture d&#39;écran 2026-06-27 180120" src="https://github.com/user-attachments/assets/21ee34a4-f06c-4f7a-924c-eca3342d2ca2" />
+
 ### User Profile
+
 <img width="1917" height="917" alt="Capture d&#39;écran 2026-06-27 180020" src="https://github.com/user-attachments/assets/480e4d09-cad7-4281-981a-99beabcfea65" />
 
 
