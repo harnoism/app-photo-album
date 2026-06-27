@@ -358,7 +358,6 @@ body {
     text-overflow: ellipsis;
 }
 
-/* ── POPUP ── */
 .popup-overlay {
     position: fixed;
     inset: 0;
@@ -403,20 +402,7 @@ body {
     transform: translateY(0);
 }
 
-/* Desktop : popup centrée */
-@media (min-width: 640px) {
-    .popup-overlay {
-        align-items: center;
-    }
 
-    .popup {
-        border-radius: 20px !important;
-        max-width: 560px;
-        max-height: 88vh;
-    }
-}
-
-/* ── POPUP HEADER ── */
 .popup-header {
     display: flex;
     align-items: center;
@@ -490,16 +476,13 @@ body {
     margin-bottom: 8px;
 }
 
-/* ── TAGS SUGGESTIONS ── */
 .popup-suggestions {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
     margin-bottom: 10px;
-    /* FIX: espace entre suggestions et tags choisis */
 }
 
-/* FIX: séparateur visuel entre suggestions et sélection */
 .popup-tags-row {
     display: flex;
     flex-wrap: wrap;
@@ -507,9 +490,7 @@ body {
     margin-bottom: 12px;
     align-items: center;
     padding-top: 8px;
-    /* FIX: espace au-dessus */
     border-top: 1px solid #e0e0e0;
-    /* FIX: ligne séparatrice */
 }
 
 .sug-tag {
@@ -587,7 +568,6 @@ body {
     white-space: nowrap;
 }
 
-/* ── VISIBILITE ── */
 .visibilite {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -631,7 +611,6 @@ body {
     color: var(--blanc);
 }
 
-/* ── CREATE BTN ── */
 .create-btn {
     padding: 8px 14px;
     border-radius: 14px;
@@ -648,7 +627,6 @@ body {
     margin-top: 0;
 }
 
-/* ── POPUP 2 ── */
 .popup-overlay2 {
     position: fixed;
     inset: 0;
@@ -724,7 +702,6 @@ body {
     font-family: inherit;
 }
 
-/* ── POPUP 3 ── */
 .popup-overlay3 {
     position: fixed;
     inset: 0;
@@ -816,6 +793,17 @@ body {
     }
 }
 
+@media (min-width: 640px) {
+    .popup-overlay {
+        align-items: center;
+    }
+
+    .popup {
+        border-radius: 20px !important;
+        max-width: 560px;
+        max-height: 88vh;
+    }
+}
 @media (min-width: 768px) {
     .popup-overlay.open .popup {
         transform: translateY(0);

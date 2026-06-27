@@ -35,12 +35,7 @@ class AlbumModel
     public function getUserAlbums($user_id)
     {
         $stmt = $this->pdo->prepare("
-            SELECT
-                a.id,
-                a.title,
-                a.description,
-                a.tags,
-                a.visibility,
+            SELECT a.id, a.title, a.description, a.tags, a.visibility,
                 COUNT(p.id) AS photo_count
             FROM albums a
             LEFT JOIN photos p ON p.album_id = a.id
@@ -140,22 +135,15 @@ class AlbumModel
     public function getPublicAlbums($user_id)
     {
         $stmt = $this->pdo->prepare("
-        SELECT
-            a.id,
-            a.title,
-            a.description,
-            a.visibility,
-            a.tags,
-            u.name AS owner_name,
-            COUNT(DISTINCT p.id) AS photo_count
+        SELECT a.id, a.title, a.description, a.visibility, a.tags, u.name AS owner_name, 
+        COUNT(DISTINCT p.id) AS photo_count
         FROM albums a
         JOIN users u ON u.id = a.user_id
         LEFT JOIN photos p ON p.album_id = a.id
         LEFT JOIN album_permissions ap ON ap.album_id = a.id AND ap.user_id = ?
         WHERE a.user_id != ?
         AND (
-            a.visibility = 'public'
-            OR (a.visibility = 'restricted' AND ap.id IS NOT NULL)
+            a.visibility = 'public' OR (a.visibility = 'restricted' AND ap.id IS NOT NULL)
         )
         GROUP BY a.id
         ORDER BY a.created_at DESC

@@ -35,8 +35,7 @@ class CommentModel
     public function getCommentsByPhoto($photo_id)
     {
         $stmt = $this->pdo->prepare("
-            SELECT c.id, c.photo_id, c.user_id, c.content, c.created_at, c.updated_at,
-                   u.name AS username
+            SELECT c.id, c.photo_id, c.user_id, c.content, c.created_at, c.updated_at, u.name AS username
             FROM comments c
             JOIN users u ON u.id = c.user_id
             WHERE c.photo_id = ?

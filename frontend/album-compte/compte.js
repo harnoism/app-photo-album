@@ -84,7 +84,7 @@ class CompteController {
         btn.textContent = isFollowing ? 'Se désabonner' : 'S\'abonner';
         btn.style.background = isFollowing ? '#A71F81' : 'white';
         btn.style.color = isFollowing ? 'white' : '#A71F81';
-        
+
         btn.addEventListener('click', () => this._toggleFollow(btn));
         container.after(btn);
     }
@@ -130,7 +130,6 @@ class CompteController {
     }
 
     _bindEvents() {
-        // Edit mode
         document.getElementById('editProfileBtn')?.addEventListener('click', () => {
             document.getElementById('bioEditBlock').style.display = 'block';
             document.getElementById('bioBlock').style.display = 'none';
@@ -145,7 +144,6 @@ class CompteController {
 
         document.getElementById('saveBioBtn')?.addEventListener('click', () => this._saveProfile());
 
-        // Avatar
         document.getElementById('avatarInput')?.addEventListener('change', (e) => {
             const file = e.target.files[0];
             if (!file) return;
@@ -158,7 +156,6 @@ class CompteController {
             reader.readAsDataURL(file);
         });
 
-        // Tabs
         document.getElementById('tabFavoris')?.addEventListener('click', () => {
             document.getElementById('panelFavoris').style.display = 'block';
             document.getElementById('panelParams').style.display = 'none';
@@ -173,7 +170,6 @@ class CompteController {
             document.getElementById('tabFavoris').classList.remove('active');
         });
 
-        // Déco
         document.getElementById('decoBtn')?.addEventListener('click', () => {
             if (!confirm('Se déconnecter ?')) return;
             fetch(`${BASE}?t=logout`, { method: 'POST' }).then(() => {

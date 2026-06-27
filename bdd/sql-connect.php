@@ -11,7 +11,7 @@ class SqlConnect
     public function __construct()
     {
 
-        // configuration mysql
+        // CONFIG SQL
         $this->host = '127.0.0.1';
         $this->port = '3306';
 
@@ -33,13 +33,12 @@ class SqlConnect
                 $this->password
             );
 
-            // gestion des erreurs
+            // GESTION ERREUR
             $this->db->setAttribute(
                 PDO::ATTR_ERRMODE,
                 PDO::ERRMODE_EXCEPTION
             );
 
-            // désactive les connexion persistantes
             $this->db->setAttribute(
                 PDO::ATTR_PERSISTENT,
                 false
@@ -51,7 +50,6 @@ class SqlConnect
         }
     }
 
-    // transforme les données pr pdo
     public function transformDataInDot($data)
     {
 

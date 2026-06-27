@@ -119,7 +119,6 @@ class PhotoView {
                 ${this.hideDeleteButtons ? '' : `<button class="delete-btn" title="Supprimer"><i class="fa-solid fa-trash-can" style="color: rgb(255, 255, 255);"></i></button>`}
             `;
 
-            // PAR
             item.querySelector('img').addEventListener('click', () => onCommentClick(photo));
 
             if (!this.hideDeleteButtons) {

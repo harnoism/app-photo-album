@@ -20,7 +20,6 @@ body {
     --noir: #000000;
 }
 
-/* PAGE */
 .register-page {
     min-height: 100vh;
     display: flex;
@@ -31,7 +30,6 @@ body {
 
 }
 
-/* ICON */
 #register-icon {
     width: 68px;
     height: 68px;
@@ -45,7 +43,6 @@ body {
     margin: 0 auto 1rem;
 }
 
-/* CONTAINER */
 
 .register-container {
     width: 100%;
@@ -53,7 +50,6 @@ body {
     padding: 8px;
 }
 
-/* TITRE */
 
 .register-title {
     font-size: 1.6rem;
@@ -71,7 +67,6 @@ body {
     font-weight: 500;
     margin-bottom: 2rem;
 }
-/* FORMULAIRE */
 
 .register-form {
     display: flex;
@@ -85,7 +80,6 @@ body {
     gap: 0.2rem;
 }
 
-/* INPUTS */
 
 .register-input {
     padding: 1rem 1.2rem;
@@ -115,14 +109,12 @@ body {
     font-weight: 500;
 }
 
-/* MESSAGE ERREUR */
 
 .register-error {
     color: #f87171;
     font-size: 0.9rem;
 }
 
-/* BOUTON */
 
 .register-button {
     border: 1px solid var(--violet-fonce);
@@ -137,7 +129,6 @@ body {
 }
 
 
-/* TEXTE LOGIN */
 
 .register-login-text {
     margin-top: 1rem;
@@ -147,16 +138,12 @@ body {
 }
 
 
-/* LIEN */
 
 .register-link {
     margin-left: 0.3rem;
     color: var(--rose-vif);
     text-decoration: underline;
 }
-
-/* === RESPONSIVE === */
-
 
 @media (max-width: 768px) {
     .register-container {

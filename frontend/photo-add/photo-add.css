@@ -304,7 +304,6 @@ body {
     cursor: not-allowed;
 }
 
-/* PHOTO GRID */
 .photos-grid-container {
     width: 100%;
     max-width: 700px;
@@ -375,7 +374,6 @@ body {
     transition: all 0.3s ease;
 }
 
-/* TAGS */
 
 .poput-suggestions {
     margin-bottom: 30px;
@@ -475,7 +473,6 @@ body {
 }
 
 
-/* RESPONSIVE*/
 @media (max-width: 900px) {
     .popup-overlay {
         flex-direction: column;
