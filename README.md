@@ -78,13 +78,10 @@ database/
 git clone https://github.com/harnoism/app-photo-album.git
 ```
 
-# Configurer l'environnement
-cp .env.example .env
-# Remplir les variables dans .env
-
-# Lancer avec XAMPP / WAMP
-# Placer le projet dans htdocs/
-# Importer database/app_photo_album.sql dans phpMyAdmin
+Configurer l'environnement
+Lancer avec XAMPP / WAMP
+Placer le projet dans htdocs/
+Importer database/app_photo_album.sql dans phpMyAdmin
 
 # Accéder à :
 ```http://localhost/app-photo-album/frontend/Login/login.html```
