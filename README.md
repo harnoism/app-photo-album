@@ -97,25 +97,20 @@ Open your browser:
 
 ```http://localhost/app-photo-album/frontend/Login/login.html```
 
-## Demo Account
-- Email: admin@gmail.com
-- Password: admin123
-
 ## Database Setup
 The database export is available here:
 
-database/app_photo_album.sql
+```database/app_photo_album.sql```
 
 Import it using phpMyAdmin before running the application.
 
 ## Main Features
 ### Authentication
-
 Users can:
 
-Create an account
-Log in to the application
-Photo Album Management
+- Create an account
+- Log in to the application
+- Photo Album Management
 
 Users can:
   - Create, edit and delete photo albums
